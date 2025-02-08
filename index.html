@@ -25,18 +25,25 @@
         </header>
         <!-- Content -->
         <main>
-            <section class="slideshow">
-                <span class="slides">
-                    <div style="background-image: url(./style/image/IMG-20230206-WA0027.jpg);" title="Cover of CYH's back photo">
-
+            <!-- Slideshow -->
+            <section class="slideshow"> 
+                <div class="panel">
+                    <button class="left" id="previousSlide"><i class="bi bi-chevron-compact-left"></i></button>
+                    <button class="right" id="nextSlide"><i class="bi bi-chevron-compact-right"></i></button>
+                    <span class="left cover" id="leftSlide"></span>
+                    <span class="right cover" id="rightSlide"></span>
+                </div>
+                <div class="slides" id="slides">
+                    <div class="slide" title="Cover of CYH's back photo" style="background-image: url(./style/image/IMG-20230206-WA0027.jpg);">
+        
                     </div>
-                    <div style="background-image: url(./style/image/IMG-20230206-WA0027.jpg);" title="Cover of CYH's back photo">
-                        
+                    <div class="slide" title="Cover of CYH's front photo" style="background-image: url(./style/image/DSC00467-Enhanced-SR-2.jpg);">
+        
                     </div>
-                    <div style="background-image: url(./style/image/IMG-20230206-WA0027.jpg);" title="Cover of CYH's back photo">
-                        
+                    <div class="slide" title="Cover of CYH's back photo" style="background-image: url(./style/image/20240928_213723-Enhanced-SR.jpg);">
+        
                     </div>
-                </span>
+                </div>
             </section>
         </main>
         <!-- Footer -->
