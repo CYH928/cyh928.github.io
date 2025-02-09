@@ -14,6 +14,7 @@ a {
 header {
     width: 100%;
     position: relative;
+    z-index: 10;
 }
 header nav {
     width: 90%;
@@ -53,12 +54,30 @@ main {
     margin: 0 auto;
 }
 
+/* content */
+main section {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 4em 0;
+    margin: 0;
+}
+main .headline {
+    cursor: default;
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    margin: 0;
+}
+
 /* slideshow */
 .slideshow {
     overflow: visible;
     width: 100%;
     max-width: inherit;
     position: relative;
+    padding: 0;
     margin: 0 auto;
 }
 .slideshow .slides {
@@ -136,4 +155,54 @@ main {
 }
 .slideshow .panel:hover button i {
     opacity: 1;
+}
+
+/* footer */
+footer {
+    background-color: #fbfbfd;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 9;
+}
+footer .content {
+    cursor: default;
+    width: 90%;
+    max-width: 1024px;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    padding: 1em 0;
+    margin: 0 auto;
+}
+footer .content .copyright {
+    color: #6e6e73;
+    font-size: 12px;
+    margin: 0;
+}
+footer .content .locale {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+footer .content .locale button {
+    background: none;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+footer .content .locale .lang {
+    color: #424245;
+    border-left: 1px solid #d2d2d7;
+    width: fit-content;
+    float: left;
+    font-size: 12px;
+    padding-left: 1em;
+}
+footer .content .locale .lang:hover {
+    text-decoration: underline;
 }
