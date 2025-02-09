@@ -134,6 +134,6 @@ main {
     line-height: 1;
     transition: .5s;
 }
-.slideshow .panel button:hover i {
+.slideshow .panel:hover button i {
     opacity: 1;
 }
