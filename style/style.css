@@ -59,7 +59,7 @@ main section {
     width: 100%;
     height: auto;
     display: block;
-    padding: 4em 0;
+    padding-top: 4em;
     margin: 0;
 }
 main .headline {
@@ -69,6 +69,17 @@ main .headline {
     font-weight: 700;
     padding-bottom: 24px;
     margin: 0;
+}
+main .subhead {
+    cursor: default;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 16px;
+    margin: 0;
+}
+main hr {
+    margin: 24px 0;
 }
 
 /* slideshow */
@@ -199,6 +210,73 @@ section.education ul.schools li .date {
     margin-top: 6px;
 }
 
+/* work experience */
+section.experience .subhead {
+    padding-bottom: 12px;
+    margin-left: 8px;
+}
+section.experience ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+section.experience ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+}
+section.experience ul li .title {
+    color: #1d1d1f;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+section.experience ul li .organization {
+    color: #424245;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+section.experience ul li .date {
+    color: #515154;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 6px;
+}
+
+section.experience ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+}
+section.experience ul li .title {
+    color: #1d1d1f;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+section.experience ul li .organization {
+    color: #424245;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+section.experience ul li .date {
+    color: #515154;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 6px;
+}
+
 /* footer */
 footer {
     background-color: #fbfbfd;
@@ -206,6 +284,7 @@ footer {
     height: auto;
     position: relative;
     z-index: 9;
+    margin-top: 64px;
 }
 footer .content {
     cursor: default;
