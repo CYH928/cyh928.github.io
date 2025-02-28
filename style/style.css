@@ -6,8 +6,15 @@ body {
     position: relative;
     margin: 0;
 }
-a {
-    text-decoration: none;
+.visuallyhidden {
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    border: 0;
+    padding: 0;
+    margin: -1px;
 }
 
 /* navbar */
@@ -30,6 +37,7 @@ header nav a {
     cursor: pointer;
     width: fit-content;
     height: auto;
+    text-decoration: none;
 }
 header nav a.text-logo {
     color: #000;
@@ -48,7 +56,7 @@ header nav a.text-logo:hover {
 
 /* homepage */
 main {
-    width: 90%;
+    width: 100%;
     max-width: 980px;
     height: auto;
     margin: 0 auto;
@@ -56,7 +64,7 @@ main {
 
 /* content */
 main section {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
     padding-top: 4em;
@@ -66,7 +74,8 @@ main .headline {
     cursor: default;
     color: #000;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: -.005em;
     padding-bottom: 24px;
     margin: 0;
 }
@@ -76,6 +85,12 @@ main .subhead {
     font-size: 32px;
     font-weight: 600;
     padding-bottom: 16px;
+    margin: 0;
+}
+main p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.25;
     margin: 0;
 }
 main hr {
