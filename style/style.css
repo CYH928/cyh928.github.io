@@ -16,6 +16,9 @@ body {
     padding: 0;
     margin: -1px;
 }
+.chin {
+    font-family: "Noto Serif HK", serif;
+}
 
 /* navbar */
 header {
@@ -83,7 +86,7 @@ main .subhead {
     cursor: default;
     color: #000;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 16px;
     margin: 0;
 }
@@ -207,25 +210,25 @@ section.education ul.schools li img {
 }
 section.education ul.schools li .name {
     color: #1d1d1f;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 21px;
+    font-weight: 500;
     margin: 0;
 }
 section.education ul.schools li .course {
     color: #424245;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 400;
     margin: 0;
 }
 section.education ul.schools li .date {
     color: #515154;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 300;
     margin: 0;
     margin-top: 6px;
 }
 
-/* work experience */
+/* experience */
 section.experience .subhead {
     padding-bottom: 12px;
     margin-left: 8px;
@@ -247,49 +250,51 @@ section.experience ul li {
 }
 section.experience ul li .title {
     color: #1d1d1f;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 500;
     margin: 0;
 }
 section.experience ul li .organization {
     color: #424245;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 400;
     margin: 0;
 }
 section.experience ul li .date {
     color: #515154;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 300;
     margin: 0;
     margin-top: 6px;
 }
 
-section.experience ul li {
+/* languages */
+section.language ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    padding: 12px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 12px;
 }
-section.experience ul li .title {
+section.language ul li {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+section.language ul li .name {
     color: #1d1d1f;
     font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-}
-section.experience ul li .organization {
-    color: #424245;
-    font-size: 18px;
     font-weight: 500;
     margin: 0;
 }
-section.experience ul li .date {
-    color: #515154;
-    font-size: 16px;
+section.language ul li .level {
+    color: #424245;
+    font-size: 18px;
     font-weight: 400;
     margin: 0;
-    margin-top: 6px;
 }
 
 /* footer */
