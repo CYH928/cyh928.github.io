@@ -285,8 +285,8 @@ section.experience ul.clubs li .date {
 /* awards & certificates */
 section.award ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 0;
     margin: 0;
@@ -295,49 +295,65 @@ section.award ul a {
     text-decoration: none;
 }
 section.award ul li {
+    overflow: hidden;
     background: #f5f5f7;
     width: auto;
     min-height: calc(128px - (16px * 2));
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 8px;
+    transition: .3s;
+}
+section.award ul li .info {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-radius: 8px;
-    padding: 16px;
-    transition: .3s;
+    padding: 16px 0;
+    margin-left: 16px;
 }
 section.award ul li:hover {
     background: #d2d2d7;
 }
 section.award ul li .name {
     color: #1d1d1f;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 500;
     margin: 0;
 }
 section.award ul li .issuer {
     color: #424245;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     margin: 0;
     margin-top: 4px;
 }
 section.award ul li .issuer::before {
     content: 'by ';
-    font-size: 15px;
     font-weight: 300;
 }
 section.award ul li .date {
     color: #515154;
-    font-size: 17px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     margin: 0;
     margin-top: 6px;
 }
 section.award ul li .date::before {
     content: 'Date of issue: ';
-    font-size: 15px;
-    font-weight: 200;
+    font-weight: 300;
+}
+section.award ul li img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    height: 100%;
+    max-height: 160px;
+    transition: .3s;
+}
+section.award ul li:hover img {
+    opacity: .75;
 }
 
 /* languages */
