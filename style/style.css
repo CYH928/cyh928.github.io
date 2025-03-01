@@ -16,9 +16,6 @@ body {
     padding: 0;
     margin: -1px;
 }
-.chin {
-    font-family: "Noto Serif HK", serif;
-}
 
 /* navbar */
 header {
@@ -219,6 +216,7 @@ section.education ul.schools li .course {
     font-size: 19px;
     font-weight: 400;
     margin: 0;
+    margin-top: 4px;
 }
 section.education ul.schools li .date {
     color: #515154;
@@ -233,10 +231,17 @@ section.experience .subhead {
     padding-bottom: 12px;
     margin-left: 8px;
 }
+section.experience a {
+    text-decoration: none;
+}
+section.experience a:hover {
+    text-decoration: underline;
+}
 section.experience ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     gap: 8px;
     padding: 0;
     margin: 0;
@@ -248,19 +253,30 @@ section.experience ul li {
     gap: 16px;
     padding: 12px;
 }
-section.experience ul li .title {
+section.experience ul.jobs li .title,
+section.experience ul.clubs li .name {
     color: #1d1d1f;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 500;
     margin: 0;
 }
-section.experience ul li .organization {
+section.experience ul.clubs li  .position {
+    color: #1d1d1f;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 3px;
+}
+section.experience ul.jobs li .organization,
+section.experience ul.clubs li .organization {
     color: #424245;
     font-size: 17px;
     font-weight: 400;
     margin: 0;
+    margin-top: 4px;
 }
-section.experience ul li .date {
+section.experience ul.jobs li .date,
+section.experience ul.clubs li .date {
     color: #515154;
     font-size: 17px;
     font-weight: 300;
@@ -274,7 +290,7 @@ section.language ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 12px;
+    margin: 0;
 }
 section.language ul li {
     width: fit-content;
@@ -286,15 +302,27 @@ section.language ul li {
 }
 section.language ul li .name {
     color: #1d1d1f;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 500;
     margin: 0;
 }
 section.language ul li .level {
     color: #424245;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     margin: 0;
+}
+
+/* skill */
+section.skill div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+section.skill div img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 64px;
 }
 
 /* footer */
