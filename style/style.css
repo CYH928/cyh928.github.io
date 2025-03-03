@@ -342,7 +342,7 @@ section.award ul li .date {
     margin-top: 6px;
 }
 section.award ul li .date::before {
-    content: 'Date of issue: ';
+    content: 'on ';
     font-weight: 300;
 }
 section.award ul li img {
