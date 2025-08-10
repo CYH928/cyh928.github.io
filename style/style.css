@@ -19,19 +19,25 @@ body {
 
 /* navbar */
 header {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .8) 25%, rgba(255, 255, 255, 0) 150%);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 10;
 }
 header nav {
     width: 90%;
-    max-width: 980px;
     height: 96px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    transition: .3s;
+}
+header nav.scrolled {
+    height: 64px;
 }
 header nav a {
     cursor: pointer;
@@ -50,6 +56,9 @@ header nav a.text-logo {
     margin: 0;
     transition: .3s;
 }
+header nav.scrolled a.text-logo {
+    font-size: 28px;
+}
 header nav a.text-logo:hover {
     color: #515154;
 }
@@ -58,6 +67,8 @@ header nav a.text-logo:hover {
 main {
     width: 100%;
     height: auto;
+    padding-top: 96px;
+    transition: padding-top 0.3s ease;
 }
 
 /* content */
@@ -72,7 +83,7 @@ main section {
 main .headline {
     cursor: default;
     color: #000;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 600;
     letter-spacing: -.005em;
     margin: 0;
@@ -116,7 +127,7 @@ main hr {
     padding: 0 calc((100dvw - 100%) / 2);
 }
 .slideshow .slides .slide {
-    cursor: pointer;
+    cursor: default;
     scroll-snap-align: center;
     aspect-ratio: 4 / 3;
     background-color: #d2d2d7;
@@ -136,7 +147,8 @@ main hr {
     left: 0;
 }
 .slideshow .panel .cover {
-    width: calc((100dvw - 100%) / 2);
+    cursor: pointer;
+    width: calc((100dvw - 100%) / 2); 
     height: 100%;
     position: absolute;
     top: 0;
@@ -153,6 +165,7 @@ main hr {
     transform: translateX(100%);
 }
 .slideshow .panel button {
+    cursor: pointer;
     outline: none;
     background: transparent;
     width: 10%;
