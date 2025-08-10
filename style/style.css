@@ -19,20 +19,18 @@ body {
 
 /* navbar */
 header {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .8) 25%, rgba(255, 255, 255, 0) 150%);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .8) 25%, rgba(255, 255, 255, 0) 150%);
     width: 100%;
     position: fixed;
     z-index: 10;
 }
 header nav {
     width: 90%;
+    max-width: 980px;
     height: 96px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     margin: 0 auto;
     transition: .3s;
 }
@@ -53,8 +51,17 @@ header nav a.text-logo {
     font-weight: 700;
     line-height: 1;
     letter-spacing: -.015em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: 0;
     transition: .3s;
+}
+header nav.scrolled a.text-logo {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 header nav.scrolled a.text-logo {
     font-size: 28px;
@@ -155,12 +162,12 @@ main hr {
     z-index: 1;
 }
 .slideshow .panel .cover.left {
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .75));
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8));
     left: 0;
     transform: translateX(-100%);
 }
 .slideshow .panel .cover.right {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .75));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8));
     right: 0;
     transform: translateX(100%);
 }
@@ -211,7 +218,7 @@ section.education ul.schools li {
     padding: 12px;
 }
 section.education ul.schools li img {
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
     object-position: center;
     height: 64px;
@@ -238,10 +245,6 @@ section.education ul.schools li .date {
 }
 
 /* experience */
-section.experience .subhead {
-    padding-bottom: 12px;
-    margin-left: 8px;
-}
 section.experience a {
     text-decoration: none;
 }
